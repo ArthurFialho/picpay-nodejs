@@ -18,7 +18,7 @@ export function errorHandler(
     send(res, err.status, err.message);
   } else {
     logger.error(`${req.method} ${req.url} - ${err.message}\n${err.stack}`);
-    send(res, 500, "Internal Server Error");
+    send(res, 500, "Erro Interno no Servidor");
   }
 }
 
